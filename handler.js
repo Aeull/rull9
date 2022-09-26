@@ -757,7 +757,7 @@ global.dfail = async (type, m, conn) => {
     description: desl, 
     title: titl,
     body: wmo,
-    thumbnail: await(await fetch(im)).buffer(),
+    thumbnail: await(await fetch(https://telegra.ph/file/38707cfd6267f16be796d.jpg)).buffer(),
     sourceUrl: gc
      }}
   })
