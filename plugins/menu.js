@@ -317,7 +317,7 @@ ${'```%npmdesc```'}
        } 
      }) 
      if (teks == '404') {
- 	let cute = `${pickRandom(['https://telegra.ph/file/dc8b3a29b4b2c770d1727.jpg', 'https://telegra.ph/file/dc8b3a29b4b2c770d1727.jpg', 'https://telegra.ph/file/1767c5d6b71e200231ca6.jpg', 'https://telegra.ph/file/13488976473884608c03c.jpg','https://telegra.ph/file/21329b42e497787e3c2c2.jpg','https://telegra.ph/file/6999d6a56326852484746.jpg', 'https://telegra.ph/file/5df66151d217bb5cd1627.jpg', 'https://telegra.ph/file/c71a6b41795ab649daef7.jpg', 'https://telegra.ph/file/c9a695262426ed4e8b3b8.jpg'])}` 
+ 	let cute = `${pickRandom(['https://telegra.ph/file/e731f85e84bd9d10bd197.jpg', 'https://telegra.ph/file/e731f85e84bd9d10bd197.jpg', 'https://telegra.ph/file/e731f85e84bd9d10bd197.jpg', 'https://telegra.ph/file/e731f85e84bd9d10bd197.jpge/6999d6a56326852484746.jpg', 'https://telegra.ph/file/e731f85e84bd9d10bd197.jpg', 'https://telegra.ph/file/e731f85e84bd9d10bd197.jpg', 'https://telegra.ph/file/e731f85e84bd9d10bd197.jpg'])}` 
  	let ori = `𝐇𝐢 𝐊𝐚𝐤, @${m.sender.split`@`[0]}
  
 𝐒𝐚𝐲𝐚 𝐀𝐝𝐚𝐥𝐚𝐡 𝐀𝐫𝐮𝐥𝐥𝐁𝐨𝐭𝐳 𝐒𝐚𝐥𝐚𝐡 𝐒𝐚𝐭𝐮 𝐁𝐨𝐭 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐘𝐚𝐧𝐠 𝐒𝐢𝐚𝐩 𝐌𝐞𝐦𝐛𝐚𝐧𝐭𝐮 𝐊𝐚𝐦𝐮 𝐌𝐞𝐦𝐩𝐞𝐫𝐦𝐮𝐝𝐚𝐡 𝐒𝐞𝐬𝐮𝐚𝐭𝐮 𝐒𝐞𝐩𝐞𝐫𝐭𝐢 𝐌𝐞𝐦𝐛𝐮𝐚𝐭 𝐒𝐭𝐢𝐜𝐤𝐞𝐫 𝐃𝐚𝐧 𝐋𝐚𝐢𝐧𝐧𝐲𝐚`
