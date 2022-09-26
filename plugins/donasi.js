@@ -1,17 +1,23 @@
 let handler = async (m, { conn, usedPrefix }) => conn.sendButton(m.chat, `
-╭─「 Donasi • Dana 」
-│ • Tri [0895336282144]
-│ • Gopay  [0895336282144]
-│ • Dana  [0895336282144]
-│ • Saweria  [https://saweria.co/thesadboy01]
+╭─「 Donasi 」
+│ • IM3 [085822347348]
+│ • AXIS  [083843192208]
+│ • Dana  [085822347348]
+│ • Saweria  [https://saweria.co/arullofc]
 ╰────
 ╭─「 *NOTE* 」
-│ > Ingin donasi? Wa.me/62895336282144
-│ _Hasil donasi akan digunakan buat sewa_
-│ _atau beli *RDP/VPS* agar bot bisa jalan_
-│ _24jam tanpa kendala_
+│ > Ingin donasi? Wa.me/6285822347348
 ╰────
-`.trim(), wm, 'Menu', usedPrefix + 'menu', m) // Tambah sendiri kalo mau
+`.trim(), wm, 'Menu', usedPrefix + 'menu', { contextInfo: { externalAdReply :{
+    showAdAttribution: true,
+    title: 'ArullBotz Testing Project By Sahrull', 
+    body: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`, 
+    description: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`, 
+    mediaType: 2, 
+    thumbnail: await genProfile(conn, m),
+    mediaUrl: `${pickRandom([`https://youtu.be/KzU_d0ctB3o`,`https://youtu.be/Y4lDHozWsnI`])}` 
+    }}})
+        
 handler.help = ['donasi']
 handler.tags = ['about']
 handler.command = /^dona(te|si)$/i
