@@ -49,7 +49,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       })
     }
     if (stiker) await conn.sendMessage(m.chat, { sticker: stiker }, {
-      quoted: ftoko,
+      quoted: m,
       mimetype: 'image/webp',
       ephemeralExpiration: 86400
     })
