@@ -655,13 +655,14 @@ module.exports = {
    await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'ArullBotz', fkontak,{
   contextInfo: {mentionedJid: [user],
     externalAdReply :{
+    showAdAttribution: true,
     mediaUrl: linkyt,
     mediaType: 2,
     description: deslink , 
-    title: titlink,
+    title: action === 'add' ? 'Semoga Betah ツ' : 'Selamat Tinggal ツ',
     body: wm,
     thumbnail: await(await fetch(pp)).buffer(),
-    sourceUrl: linkgc
+    sourceUrl: linkyt
      }}
   })
                         }
