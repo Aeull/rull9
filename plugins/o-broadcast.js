@@ -3,7 +3,8 @@ let handler  = async (m, { conn, text }) => {
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${chats.length} chat_`, m)
   for (let id of chats) {
        
-       await conn.send2ButtonImg(id, bcbg, text.trim(), wm, 'Menu', '.menu', 'Owner', '.owner', ftroli)
+       await conn.send2ButtonDoc(id, text.trim(), wm, 'Menu', '.menu', 'Owner', '.owner', ftroli, { contextInfo: { externalAdReply :{
+      showAdAttribution: true, }}})
      }
   m.reply('*Broadcast selesai*')
 }
