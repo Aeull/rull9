@@ -7,7 +7,7 @@ let totalf = Object.values(global.plugins).filter(
 conn.sendFile(m.chat, 'http://fzcdn.cf/file/dMdcL-HTKpb~wdWBsUM9.webp', 'haori.mp3', null, m, true, {
 type: 'audioMessage', 
 ptt: true, contextInfo: {
-        externalAdReply: { showAdAttribution: true, title: `Total Fitur Bot Saat Ini: ${totalf}`, body: `${pickRandom(['Follow Tiktok My Bestie'])}`, sourceUrl: 'https://www.tiktok.com/@fory_whitecattiktok?_t=8V5TGON5rgv&_r=1', thumbnail: await (await fetch(pp)).buffer(),}} 
+        externalAdReply: { showAdAttribution: true, title: `Total Fitur Bot Saat Ini: ${totalf}`, body: `${pickRandom(['Join Gc Bot'])}`, sourceUrl: 'https://chat.whatsapp.com/LHfAOQ4sa2g40Bu5sXDWva', thumbnail: await (await fetch(pp)).buffer(),}} 
      })
 }
 
