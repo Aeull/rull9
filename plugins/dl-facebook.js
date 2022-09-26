@@ -1,12 +1,21 @@
-const { facebookdl, facebookdlv2 } = require('@bochilteam/scraper')
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) throw `Use example ${usedPrefix}${command} https://fb.watch/azFEBmFRcy/`
-    const { result } = await facebookdl(args[0]).catch(async _ => await facebookdlv2(args[0]))
-    for (const { url, isVideo } of result.reverse()) conn.sendFile(m.chat, url, `facebook.${!isVideo ? 'bin' : 'mp4'}`, `🔗 *Url:* ${url}`, m)
+let fetch = require('node-fetch')
+let handler = async (m, { conn, args }) => {
+if (!args[0]) throw 'Uhm..url nya mana?'
+m.reply(wait)
+let res = await fetch(`https://botcahx-rest-api.up.railway.app/api/dowloader/tikok?url=${args[0]}`)
+if (!res.ok) throw await res.text()
+let json = await res.json()
+if (!json.status) throw json
+let { video, description, username } = json.result
+await conn.sendFile(m.chat, video, 'video.mp4', `💌 *Deskripsi*: ${description}
+\n📛 *Username*: ${username}
+`, m, false, { contextInfo: { externalAdReply :{
+ showAdAttribution: true, }}})
 }
-handler.help = ['facebook'].map(v => v + ' <url>')
+
+handler.help = ['facebook <url>']
 handler.tags = ['downloader']
 
-handler.command = /^((facebook|fb)(downloder|dl)?)$/i
-
+handler.command = /^(facebook|fb)$/i
+handler.limit = true
 module.exports = handler
