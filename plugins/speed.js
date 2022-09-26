@@ -86,11 +86,12 @@ _CPU Core(s) Usage (${cpus.length} Core CPU)_
 ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
 `.trim(), ftr, 'Speedtest', usedPrefix + 'speedtest', 'Menu', usedPrefix + 'Menu', m, { 
      quoted: ftrol,
-     contextInfo: { forwardingScore: 99999, isForwarded: true, 
-         externalAdReply: { 
-                 sourceUrl: 'https://vt.tiktok.com/ZSRRmS8vh/', 
+     contextInfo: {  
+         externalAdReply :{ 
+                 showAdAttribution: true,
+                 sourceUrl: 'https://chat.whatsapp.com/ItwCvXL02hg11U5qNaLSBe', 
              title: `Merespon dalam ${speed} milidetik`, 
-             body: '© Cute IQ-MD By Ziv San', 
+             body: '© ArullBotz', 
            thumbnail:  await (await fetch(fla + 'Ping')).buffer()
              } 
       } 
