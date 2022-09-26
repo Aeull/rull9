@@ -4,7 +4,13 @@ let handler  = async (m, { conn, text }) => {
   for (let id of chats) {
        
        await conn.send2ButtonDoc(id, text.trim(), wm, 'Menu', '.menu', 'Owner', '.owner', ftroli, { contextInfo: { externalAdReply :{
-      showAdAttribution: true, }}})
+      showAdAttribution: true, 
+      mediaUrl: 'https://bit.ly/3fmdfvr',
+      mediaType: 2,
+      body: wm,
+      title: 'Broadcast',
+      thumbnail: await(await fetch(img)).buffer(),
+      }}})
      }
   m.reply('*Broadcast selesai*')
 }
