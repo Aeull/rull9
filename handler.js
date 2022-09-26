@@ -661,7 +661,7 @@ module.exports = {
     description: deslink , 
     title: action === 'add' ? 'Semoga Betah ツ' : 'Selamat Tinggal ツ',
     body: wm,
-    thumbnail: await(await fetch('https://api.lolhuman.xyz/api/base/welcome?apikey=7facd6f11077ee4daecd55d5&img1=https://i.postimg.cc/CM34YRFb/photo-2021-02-05-10-13-39.jpg&img2=https://i.postimg.cc/CM34YRFb/photo-2021-02-05-10-13-39.jpg&background=https://i.ibb.co/8B6Q84n/LTqHsfYS.jpg&username=LoL%20Human&member=10&groupname=LoL%20Human%20Group')).buffer(),
+    thumbnail: await(await fetch(pp)).buffer(),
     sourceUrl: linkyt
      }}
   })
