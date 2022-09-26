@@ -4,7 +4,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   let stiker = false
   let wsf = false
   try {
-    let q = m.quoted ? m.quoted : m
+    let q = m.quoted ? m.quoted : ftoko
     let mime = (q.msg || q).mimetype || ''
     if (/webp/.test(mime)) {
       let img = await q.download()
@@ -43,13 +43,13 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       await wsf.build()
       const sticBuffer = await wsf.get()
       if (sticBuffer) await conn.sendMessage(m.chat, { sticker: sticBuffer }, {
-        quoted: m,
+        quoted: ftoko,
         mimetype: 'image/webp',
         ephemeralExpiration: 86400
       })
     }
     if (stiker) await conn.sendMessage(m.chat, { sticker: stiker }, {
-      quoted: m,
+      quoted: ftoko,
       mimetype: 'image/webp',
       ephemeralExpiration: 86400
     })
