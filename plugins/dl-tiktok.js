@@ -1,13 +1,21 @@
-import axios from 'axios'
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) throw `contoh:\n ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
-    let res = (await axios.get(API('males', '/tiktok', { url: args[0] } ))).data;
-    if (res.status != 200) throw res.message;
-    if (!res) throw res.message;
-    conn.sendButtonVid(m.chat, res.video, `*Judul:* ${res.title}\n${res.author ? `*Pembuat Video:* ${res.author}` : '\n' }`.trim(), 'Cara simpan digalery:\n1. Download dulu videonya\n2. Buka terus klik titik 3 pojok kanan atas\n3. lalu klik simpan!', 'menu', usedPrefix + 'menu', m)
+let fetch = require('node-fetch')
+let handler = async (m, { conn, args }) => {
+if (!args[0]) throw 'Uhm..url nya mana?'
+m.reply(wait)
+let res = await fetch(`https://botcahx-rest-api.up.railway.app/api/dowloader/tikok?url=${args[0]}`)
+if (!res.ok) throw await res.text()
+let json = await res.json()
+if (!json.status) throw json
+let { video, description, username } = json.result
+await conn.sendFile(m.chat, video, 'video.mp4', `💌 *Deskripsi*: ${description}
+\n📛 *Username*: ${username}
+`, m, false, { contextInfo: { externalAdReply :{
+ showAdAttribution: true, }}})
 }
-handler.help = ['tiktok'].map(v => v + ' <url>')
-handler.tags = ['downloader']
-handler.command = /^(tik(tok)?(dl)?)$/i
 
-export default handler
+handler.help = ['tiktok <url>']
+handler.tags = ['downloader']
+
+handler.command = /^(tiktok|tt)$/i
+handler.limit = true
+module.exports = handler
